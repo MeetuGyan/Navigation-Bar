@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 60px;
+  z-index: 1;
+}
+
+.text {
+  z-index: 1;
+  margin-left: 80px;
+  font-size: 30px;
+  color: white;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+}
+
+.basic {
+    background: linear-gradient(currentColor 0 0)0 100% /var(--d, 0) 3px no-repeat;
+    transition: 0.5s;
+    padding-bottom: 10px;
+}
+
+.basic:hover {
+    --d:100%;
+}
+
+.pic {
+  height: 100vh;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  margin-top: -50px;
+  filter: brightness(50%);
+}
+
+nav .menu-btn, #click {
+    display: none;
+}
+
+nav .menu-btn .icon {
+  color: white;
+  z-index: 3;
+  right: 30px;
+  position: absolute;
+  height: 30px;
+  width: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 848px) {
+     nav {
+        height: 140px;
+        display: flex;
+        background: black;
+    }
+
+  .container nav ul {
+    display: block;
+    top: 90px;
+    position: fixed;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background: #111;
+    text-align: center;
+  }
+
+  .container nav ul li {
+    margin: 80px 0;
+  }
+
+  .container nav ul li a {
+    font-size: 20px;
+  }
+
+  nav .menu-btn {
+      display: block;
+      margin-top: -70px;
+  }
+  nav .menu-btn .icon {
+      font-size: 20px;
+  }
+
+  .container nav .text {
+      margin-top: -50px;
+  }
+
+  #click:checked ~ ul {
+      left: 0;
+  }
+
+  #click:checked ~ .menu-btn .icon::before {
+      content: '\f00d';
+  }
+
+@media (max-width: 750px) {
+    .pic .image {
+        display: none;
+    }
+     .pic .image2 {
+         width: 100%;
+         height: 100vh;
+    }
+
+    nav {
+        height: 90px;
+        background: orangered;
+    }
+    .container nav ul {
+        background: orangered;
+    }
+
+    .container nav .text {
+        margin-top: -10px;
+        margin-left: 30px;
+    }
+    nav .menu-btn .icon{
+        margin-top: 20px;
+        margin-right: -40px;
+    }
+}
